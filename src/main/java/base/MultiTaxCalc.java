@@ -26,7 +26,15 @@ public class MultiTaxCalc {
 
   public double initial() {
     System.out.print("What is the order amount? ");
-    return Double.parseDouble(input.nextLine());
+    String n = input.nextLine();
+    try {
+      Double.parseDouble(n);
+    }
+    catch (NumberFormatException e) {
+      System.out.println("ERROR: Invalid Amount! Try Again.");
+      return initial();
+    }
+    return Double.parseDouble(n);
 
   }
 
