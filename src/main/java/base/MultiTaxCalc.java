@@ -31,7 +31,7 @@ public class MultiTaxCalc {
       Double.parseDouble(n);
     }
     catch (NumberFormatException e) {
-      System.out.println("ERROR: Invalid Amount! Try Again.");
+      System.out.println("ERROR: Invalid Value, Try Again.");
       return initial();
     }
     return Double.parseDouble(n);
